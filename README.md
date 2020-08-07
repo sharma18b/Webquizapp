@@ -14,3 +14,19 @@
 ![ss1](https://github.com/sharma18b/Webquizapp/blob/master/WebQuizApp/7.png)
 ### Progress Report 
 ![ss1](https://github.com/sharma18b/Webquizapp/blob/master/WebQuizApp/8.png)
+### Installation
+
+```sh
+$  pip install django
+```
+
+Make migrations and start the server.
+```sh
+$ python manage.py makemigrations
+$ python manage.py migrate
+$ python manage.py runserver
+```
+#### Open the admin page in the browser import the csv file of Students and there Credentials with the required header 
+#### Make your own quizzes 
+#### Take tests
+# Play Around and Have fun.
