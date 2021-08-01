@@ -10,6 +10,7 @@ from .forms import QuestionForm
 from .models import Quiz, Category, Progress, Sitting, Question
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 
 
@@ -32,7 +33,7 @@ class SittingFilterTitleMixin(object):
 
 class QuizListView(ListView):
     model = Quiz
-    # @login_required
+    
     def get_queryset(self):
         queryset = super(QuizListView, self).get_queryset()
         return queryset.filter(draft=False)
@@ -41,7 +42,7 @@ class QuizListView(ListView):
 class QuizDetailView(DetailView):
     model = Quiz
     slug_field = 'url'
-
+    
     def get(self, request, *args, **kwargs):
         self.object = self.get_object()
 
@@ -59,7 +60,7 @@ class CategoriesListView(ListView):
 class ViewQuizListByCategory(ListView):
     model = Quiz
     template_name = 'view_quiz_category.html'
-
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         self.category = get_object_or_404(
             Category,
@@ -99,7 +100,7 @@ class QuizUserProgressView(TemplateView):
 
 class QuizMarkingList(QuizMarkerMixin, SittingFilterTitleMixin, ListView):
     model = Sitting
-
+    @login_required
     def get_queryset(self):
         queryset = super(QuizMarkingList, self).get_queryset()\
                                                .filter(complete=True)
@@ -140,7 +141,6 @@ class QuizMarkingDetail(QuizMarkerMixin, DetailView):
 class QuizTake(FormView):
     form_class = QuestionForm
     template_name = 'question.html'
-
     def dispatch(self, request, *args, **kwargs):
         self.quiz = get_object_or_404(Quiz, url=self.kwargs['quiz_name'])
         if self.quiz.draft and not request.user.has_perm('quiz.change_quiz'):
@@ -256,6 +256,19 @@ def login_user(request):
             return redirect('login')
     else:
         return render(request, 'login.html', {})
+def signup_user(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('index')
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
 
 
 def logout_user(request):
