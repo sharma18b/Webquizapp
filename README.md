@@ -1,19 +1,15 @@
 #                           QuizMasterWebapp
 ##               A Basic Web Based Quiz Application
-###                            login page
+###                            Signup as a Student
+![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/7.png)
+###                            Signup as a Teacher
+![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/5.png)
+###                             List of students
 ![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/1.png)
-###        Index page for a brief overview of quizzes 
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/1.png)
-###           list on quizzes (after a click from navbar)
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/1.png)
-###                 Or open category of Quizzes
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/1.png)
-###                        Quiz taking 
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/1.png)
-###             Exam Results page just after attempting a Quiz
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/1.png)
-### Progress Report 
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/1.png)
+###                         Open Subject wise Quizzes
+![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/2.png)
+###                 Quiz Answers and Score Review/ Progress Report
+![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/3.png)
 ### Installation
 
 ```sh
