@@ -1,17 +1,17 @@
 #                           QuizMasterWebapp
 ##               A Basic Web Based Quiz Application
 ###                            Signup as a Student
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/student signup.png)
+![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/student%20signup.png)
 ###                            Signup as a Teacher
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/teacher signup.png)
+![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/teacher%20signup.png)
 ###                             List of students
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/student list.png)
+![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/student%20list.png)
 ###                         Quiz Creation as a Teacher
 ![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/create_quiz.png)
 ###                         Add / Edit Questions to Quiz
 ![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/add_ques.png)
 ###                         Open Subject wise Quizzes
-![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/quiz subject wise.png)
+![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/quiz%20subject%20wise.png)
 ###                 Quiz Answers and Score Review/ Progress Report
 ![ss1](https://github.com/sharma18b/Webquizapp/blob/master/Test/ss/analyse_your_performance.png.png)
 ###                                   About
